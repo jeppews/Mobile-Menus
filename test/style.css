@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-size: 14px; }
+  body.js-menu-open {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden; }
+    body.js-menu-open .js-mobile-menu {
+      display: block;
+      left: 0%; }
+
+.content {
+  height: 1600px;
+  background: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.js-mobile-menu {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 90%;
+  height: 100vh;
+  z-index: 100;
+  overflow-y: scroll;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  display: none; }
+  .js-mobile-menu ul {
+    margin: 0;
+    padding: 0; }
+    .js-mobile-menu ul li {
+      background: #eee;
+      height: 400px;
+      width: 100%; }
+      .js-mobile-menu ul li:nth-child(2n+1) {
+        background: #d4d4d4; }
+
+/*# sourceMappingURL=style.css.map */

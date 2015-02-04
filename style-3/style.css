@@ -5,8 +5,7 @@ body {
   font-weight: 300; }
   body.mobile-menu-open {
     max-height: 100vh;
-    overflow: hidden;
-    -webkit-overflow-scrolling: touch; }
+    overflow: hidden; }
     body.mobile-menu-open .mobile-menu nav {
       display: block; }
 
@@ -29,12 +28,14 @@ div.div {
 .mobile-menu {
   position: absolute;
   top: 0;
-  right: 100%;
+  right: 100vw;
   bottom: 0;
   left: 0;
   overflow-y: scroll;
+  max-height: 100vh;
   z-index: 100;
-  display: none; }
+  display: none;
+  -webkit-overflow-scrolling: touch; }
   .mobile-menu nav ul {
     padding: 3em 0;
     margin: 0;

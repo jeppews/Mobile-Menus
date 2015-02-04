@@ -1,0 +1,42 @@
+@import 'bourbon/bourbon'
+@import 'media-queries'
+
+body
+	margin: 0
+	font-family: Helvetica, Arial, Sans-Serif
+	font-size: 14px
+
+	&.js-menu-open
+		+position(fixed, 0 0 0 0)
+		overflow: hidden
+
+		.js-mobile-menu
+			display: block
+			left: 0%
+
+.content
+	height: 1600px
+	background: url('bg.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+
+.js-mobile-menu
+	+position(absolute, 0 null null -100%)
+	width: 90%
+	height: 100vh
+	z-index: 100
+	overflow-y: scroll
+	+transition()
+	display: none
+
+	ul
+		margin: 0
+		padding: 0
+
+		li
+			background: #eee
+			height: 400px
+			width: 100%
+
+			&:nth-child(2n+1)
+				background: darken(#eee, 10%)

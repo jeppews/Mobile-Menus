@@ -12,7 +12,6 @@ body
 	&.mobile-menu-open
 		max-height: 100vh
 		overflow: hidden
-		-webkit-overflow-scrolling: touch
 
 		// +iphone4
 		// 	+position(fixed, 0 0 0 0)
@@ -37,11 +36,12 @@ div.div
 		padding: 1em
 
 .mobile-menu
-	+position(absolute, 0 100% 0 0)
+	+position(absolute, 0 100vw 0 0)
 	overflow-y: scroll
-	// max-height: 100vh
+	max-height: 100vh
 	z-index: 100
 	display: none
+	-webkit-overflow-scrolling: touch
 
 	nav
 		ul
@@ -74,20 +74,3 @@ div.div
 				&.open
 					display: block
 					height: auto
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

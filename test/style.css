@@ -16,8 +16,7 @@ body {
 .content {
   height: 1600px;
   background: url("bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background-repeat: no-repeat; }
 
 .js-mobile-menu {
   position: absolute;
@@ -27,6 +26,7 @@ body {
   height: 100vh;
   z-index: 100;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;

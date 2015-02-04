@@ -6,6 +6,14 @@ body {
   body.mobile-menu-open {
     max-height: 100vh;
     overflow: hidden; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2 / 3) {
+      body.mobile-menu-open {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: auto; } }
     body.mobile-menu-open .mobile-menu nav {
       display: block; }
 
@@ -32,7 +40,6 @@ div.div {
   bottom: 0;
   left: 0;
   overflow-y: scroll;
-  max-height: 100vh;
   z-index: 100;
   display: none; }
   .mobile-menu nav ul {

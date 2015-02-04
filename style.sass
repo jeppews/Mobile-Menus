@@ -1,0 +1,66 @@
+@import 'bourbon/bourbon'
+@import 'neat/neat'
+@import 'js-mobile-menu-style-1'
+
+$green: #0cba5d
+$light: #edfff5
+$dark: 	#333333
+
+body
+	font-family: "Roboto", Helvetica, Arial, Sans-Serif
+	font-size: 14px
+	font-weight: 300
+	margin: 0
+	padding: 0
+
+header
+	background: $green
+	color: $light
+	height: 400px
+	padding-top: 160px
+	text-align: center
+	position: relative
+
+	h1
+		font-size: 3em
+
+	h4
+		font-family: 'Droid Serif', Georgia, Serif
+		font-style: italic
+		font-weight: 400
+		
+		a
+			color: inherit
+
+	&:after
+		content: ''
+		display: block
+		+size(40px)
+		background: $green
+		+position(absolute, null null -20px 50%)
+		margin-left: -20px
+		+transform(rotate(45deg))
+
+section
+	+outer-container()
+
+.demo
+	background: url('img/iphone.png')
+	background-repeat: no-repeat
+	background-position: 50% 50% 
+	width: 383px
+	height: 800px
+	position: relative
+
+	.demo-wrapper
+		width: 320px
+		height: 544px
+		+position(absolute, 141px null null 35px)
+		background: $green
+		padding: 1em
+		overflow: hidden
+
+		.style-name
+			font-size: 2em
+			color: $light
+			font-weight: bold

@@ -1,0 +1,137 @@
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+.demo-wrapper.style-1.mobile-menu-open {
+  max-height: 100%;
+  overflow: hidden; }
+  .demo-wrapper.style-1.mobile-menu-open .mobile-menu nav {
+    display: block; }
+.demo-wrapper.style-1 .js-mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  max-height: 100%; }
+  .demo-wrapper.style-1 .js-mobile-menu .controls {
+    height: 40px;
+    background: #fff;
+    box-shadow: 0 1px 1px #999; }
+  .demo-wrapper.style-1 .js-mobile-menu nav {
+    padding: 60px 40px;
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s;
+    display: none; }
+    .demo-wrapper.style-1 .js-mobile-menu nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
+      .demo-wrapper.style-1 .js-mobile-menu nav ul li {
+        border-bottom: 1px solid #f8f8f8;
+        background: #fff; }
+        .demo-wrapper.style-1 .js-mobile-menu nav ul li a {
+          display: block;
+          padding: 1em;
+          color: #999;
+          text-decoration: none; }
+      .demo-wrapper.style-1 .js-mobile-menu nav ul ul {
+        display: none;
+        overflow: hidden;
+        -webkit-transition: all 0.15s ease-out 0s;
+        -moz-transition: all 0.15s ease-out 0s;
+        transition: all 0.15s ease-out 0s;
+        box-shadow: none;
+        border-top: 1px solid #f8f8f8;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); }
+        .demo-wrapper.style-1 .js-mobile-menu nav ul ul li {
+          padding-left: 1.5em;
+          background: #fafafa;
+          border-bottom: 1px solid #f0f0f0; }
+          .demo-wrapper.style-1 .js-mobile-menu nav ul ul li:last-child {
+            border-bottom: none; }
+        .demo-wrapper.style-1 .js-mobile-menu nav ul ul.open {
+          display: block; }
+
+body {
+  font-family: "Roboto", Helvetica, Arial, Sans-Serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0; }
+
+header {
+  background: #0cba5d;
+  color: #edfff5;
+  height: 400px;
+  padding-top: 160px;
+  text-align: center;
+  position: relative; }
+  header h1 {
+    font-size: 3em; }
+  header h4 {
+    font-family: "Droid Serif", Georgia, Serif;
+    font-style: italic;
+    font-weight: 400; }
+    header h4 a {
+      color: inherit; }
+  header:after {
+    content: "";
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: #0cba5d;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -20px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+section {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  section:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.demo {
+  background: url("img/iphone.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 383px;
+  height: 800px;
+  position: relative; }
+  .demo .demo-wrapper {
+    width: 320px;
+    height: 544px;
+    position: absolute;
+    top: 141px;
+    left: 35px;
+    background: #0cba5d;
+    padding: 1em;
+    overflow: hidden; }
+    .demo .demo-wrapper .style-name {
+      font-size: 2em;
+      color: #edfff5;
+      font-weight: bold; }
+
+/*# sourceMappingURL=style.css.map */

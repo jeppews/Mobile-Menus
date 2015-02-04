@@ -3,11 +3,7 @@ body {
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 14px; }
   body.js-menu-open {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    max-height: 100vh;
     overflow: hidden; }
     body.js-menu-open .js-mobile-menu {
       display: block;
@@ -19,7 +15,7 @@ body {
   background-repeat: no-repeat; }
 
 .js-mobile-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -100%;
   width: 90%;

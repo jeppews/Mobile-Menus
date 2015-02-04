@@ -7,7 +7,7 @@ body
 	font-size: 14px
 
 	&.js-menu-open
-		+position(fixed, 0 0 0 0)
+		max-height: 100vh
 		overflow: hidden
 
 		.js-mobile-menu
@@ -20,7 +20,7 @@ body
 	background-repeat: no-repeat
 
 .js-mobile-menu
-	+position(absolute, 0 null null -100%)
+	+position(fixed, 0 null null -100%)
 	width: 90%
 	max-height: 100vh
 	z-index: 100

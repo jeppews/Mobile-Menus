@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mobile Menu</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery-1.8.3.min.js"></script>
+</head>
+<body>
+
+	<div class="mobile-menu">
+		<div class="controls"></div>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Galleri</a></li>
+				<li><a href="#">Nyheder</a></li>
+				<li><a href="#">Udstillinger</a></li>
+				<li><a href="#">Yoga</a></li>
+				<li><a href="#">Kontakt</a></li>
+				<li><a href="#">Home</a></li>
+				<li>
+					<a href="#" class="sub">Udvid</a>
+					<ul>
+						<li><a href="#">Nyheder</a></li>
+						<li><a href="#">Udstillinger</a></li>
+						<li><a href="#">Yoga</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Kontakt</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="div"></div>
+	<div class="div"></div>
+	<div class="div"></div>
+	<div class="div"></div>
+
+	<script>
+		$('.mobile-menu .controls').on('click', function() {
+
+			if ( $('body').hasClass('mobile-menu-open') ) {
+				$('body').removeClass('mobile-menu-open');
+			} else {
+				$('body').addClass('mobile-menu-open');
+			}
+
+		});
+
+		$('.mobile-menu .sub').on('click', function() {
+
+			menu = $(this).parent().find('ul');
+
+			if ( $(menu).hasClass('open') ) {
+				$(menu).removeClass('open');
+			} else {
+				$(menu).addClass('open');
+			}
+
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mobile Menu</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery-1.8.3.min.js"></script>
+</head>
+<body>
+
+	<div class="mobile-menu-controls"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26px" height="18px" viewBox="0 0 26 18" enable-background="new 0 0 26 18" fill="#fff" xml:space="preserve"><rect width="26" height="2"/><rect y="8" width="26" height="2"/><rect y="16" width="26" height="2"/></svg></div>
+
+	<div class="mobile-menu">
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Galleri</a></li>
+				<li><a href="#">Nyheder</a></li>
+				<li><a href="#">Udstillinger</a></li>
+				<li><a href="#">Yoga</a></li>
+				<li><a href="#">Kontakt</a></li>
+				<li><a href="#">Home</a></li>
+				<li>
+					<a href="#" class="sub">Udvid</a>
+					<ul>
+						<li><a href="#">Nyheder</a></li>
+						<li><a href="#">Udstillinger</a></li>
+						<li><a href="#">Yoga</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Kontakt</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="div"></div>
+	<div class="div"></div>
+	<div class="div"></div>
+	<div class="div"></div>
+
+	<script>
+		$('.mobile-menu-controls').on('click', function() {
+
+			if ( $('body').hasClass('mobile-menu-open') ) {
+
+				$('body').animate({
+					paddingLeft: 0
+				}, 140);
+
+				$('.mobile-menu').animate({
+					right: '100vw'
+				}, 140, function() {
+					$('.mobile-menu').hide();
+					$('body').removeClass('mobile-menu-open');
+				});
+
+			} else {
+
+				$('body').addClass('mobile-menu-open');
+
+				$('body').animate({
+					paddingLeft: '80vw'
+				}, 140);
+
+				$('.mobile-menu').show();
+				$('.mobile-menu').animate({
+					right: '20vw'
+				}, 140);
+
+			}
+
+		});
+
+		$('.mobile-menu .sub').on('click', function() {
+
+			menu = $(this).parent().find('ul');
+
+			if ( $(menu).hasClass('open') ) {
+				$(menu).removeClass('open');
+			} else {
+				$(menu).addClass('open');
+			}
+
+		});
+	</script>
+
+</body>
+</html>

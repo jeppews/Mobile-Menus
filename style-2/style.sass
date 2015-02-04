@@ -1,0 +1,88 @@
+@import 'bourbon/bourbon'
+
+$bg: #fff
+
+body
+	margin: 0
+	padding: 0
+	font-family: Raleway
+	font-weight: 300
+
+	&.mobile-menu-open
+		max-height: 100vh
+		overflow: hidden	
+		
+		.mobile-menu nav
+			display: block
+
+div.div
+	background: #e5e5e5
+	height: 400px
+
+	&:nth-child(2n+1)
+		background: darken(#e5e5e5, 5%)
+
+.mobile-menu
+	+position(fixed, 0 0 0 0)
+	overflow-y: scroll
+	max-height: 100vh
+	z-index: 100
+
+	.controls
+		height: 3em
+		background: #62a4dc
+
+		svg
+			padding: 1em
+
+	nav
+		+position(fixed, 100vh 0 0 0)
+		display: none
+
+		ul
+			padding: 3em 0
+			margin: 0
+			list-style: none
+			background: #fff
+
+			li
+				display: block
+				padding: 0 1em 0 4em
+
+				a
+					display: block
+					padding: 1em 0
+					border-bottom: 1px solid #f5f5f5
+					text-decoration: none
+					color: #888
+
+			ul
+				margin: 0
+				padding: 0
+				height: 0
+				overflow: hidden
+				+transition()
+
+				li
+					padding-left: 1em
+
+				&.open
+					display: block
+					height: auto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

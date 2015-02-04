@@ -14,9 +14,9 @@ body {
     width: 100%; }
 
 .content {
-  height: 1600px;
+  height: 4600px;
   background: url("bg.jpg");
-  background-repeat: no-repeat; }
+  background-repeat: repeat; }
 
 .js-mobile-menu {
   position: absolute;

@@ -7,12 +7,18 @@ body
 	font-size: 14px
 
 	&.js-menu-open
-		max-height: 100vh
-		overflow: hidden
+		// max-height: 100vh
+		// overflow: hidden
 
 		.js-mobile-menu
 			display: block
 			left: 0%
+
+		.content
+			max-height: 100vh
+			overflow: hidden
+			+position(fixed, 0 null null 90%)
+			width: 100%
 
 .content
 	height: 1600px
@@ -20,12 +26,12 @@ body
 	background-repeat: no-repeat
 
 .js-mobile-menu
-	+position(fixed, 0 null null -100%)
+	+position(absolute, 0 null null -100%)
 	width: 90%
-	max-height: 100vh
-	z-index: 100
-	overflow-y: scroll
-	-webkit-overflow-scrolling: touch
+	// max-height: 100vh
+	// z-index: 100
+	// overflow-y: scroll
+	// -webkit-overflow-scrolling: touch
 	+transition()
 	display: none
 

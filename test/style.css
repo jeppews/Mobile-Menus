@@ -2,12 +2,16 @@ body {
   margin: 0;
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 14px; }
-  body.js-menu-open {
+  body.js-menu-open .js-mobile-menu {
+    display: block;
+    left: 0%; }
+  body.js-menu-open .content {
     max-height: 100vh;
-    overflow: hidden; }
-    body.js-menu-open .js-mobile-menu {
-      display: block;
-      left: 0%; }
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 90%;
+    width: 100%; }
 
 .content {
   height: 1600px;
@@ -15,14 +19,10 @@ body {
   background-repeat: no-repeat; }
 
 .js-mobile-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: -100%;
   width: 90%;
-  max-height: 100vh;
-  z-index: 100;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;

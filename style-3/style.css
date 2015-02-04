@@ -34,9 +34,9 @@ div.div {
     padding: 1em; }
 
 .mobile-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 100vw;
+  right: 100%;
   bottom: 0;
   left: 0;
   overflow-y: scroll;

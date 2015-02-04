@@ -7,14 +7,6 @@ body {
     max-height: 100vh;
     overflow: hidden;
     -webkit-overflow-scrolling: touch; }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2 / 3) {
-      body.mobile-menu-open {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: auto; } }
     body.mobile-menu-open .mobile-menu nav {
       display: block; }
 

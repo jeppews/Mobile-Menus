@@ -9,6 +9,7 @@
 <body>
 	
 	<div class="js-mobile-menu">
+		<button id="toggle">Toggle</button>
 		<nav>
 			<ul>
 				<li></li>
@@ -21,17 +22,13 @@
 
 	<div class="content"></div>
 
+	<script src="js-mobile-menu.js"></script>
 	<script>
 
 		$(document).ready(function() {
-			$('div').on('click', function() {
-				body = $('body');
-
-				if (body.hasClass('js-menu-open')) {
-					body.removeClass('js-menu-open');
-				} else {
-					body.addClass('js-menu-open');
-				}
+			jsmm({
+				content: '.content',
+				speed: 100
 			});
 		});
 

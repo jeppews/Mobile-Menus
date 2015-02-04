@@ -2,16 +2,6 @@ body {
   margin: 0;
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 14px; }
-  body.js-menu-open .js-mobile-menu {
-    display: block;
-    left: 0%; }
-  body.js-menu-open .content {
-    max-height: 100vh;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 90%;
-    width: 100%; }
 
 .content {
   height: 4600px;
@@ -19,22 +9,23 @@ body {
   background-repeat: repeat; }
 
 .js-mobile-menu {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 90%;
-  -webkit-transition: all 0.15s ease-out 0s;
-  -moz-transition: all 0.15s ease-out 0s;
-  transition: all 0.15s ease-out 0s;
-  display: none; }
-  .js-mobile-menu ul {
-    margin: 0;
-    padding: 0; }
-    .js-mobile-menu ul li {
-      background: #eee;
-      height: 400px;
-      width: 100%; }
-      .js-mobile-menu ul li:nth-child(2n+1) {
-        background: #d4d4d4; }
+  position: fixed; }
+  .js-mobile-menu nav {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s; }
+    .js-mobile-menu nav ul {
+      margin: 0;
+      padding: 0; }
+      .js-mobile-menu nav ul li {
+        background: #eee;
+        height: 400px;
+        width: 100%; }
+        .js-mobile-menu nav ul li:nth-child(2n+1) {
+          background: #d4d4d4; }
 
 /*# sourceMappingURL=style.css.map */

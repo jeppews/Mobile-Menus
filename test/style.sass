@@ -6,22 +6,9 @@ body
 	font-family: Helvetica, Arial, Sans-Serif
 	font-size: 14px
 
-	&.js-menu-open
-		// max-height: 100vh
-		// overflow: hidden
-
-		.js-mobile-menu
-			display: block
-			left: 0%
-
-		.content
-			max-height: 100vh
-			overflow: hidden
-			+position(fixed, 0 null null 90%)
-			width: 100%
-
-			+iphone4
-
+	// &.js-menu-open
+	// 	.content
+	// 		+position(fixed)
 
 .content
 	height: 4600px
@@ -29,23 +16,21 @@ body
 	background-repeat: repeat
 
 .js-mobile-menu
-	+position(absolute, 0 null null -100%)
-	width: 90%
-	// max-height: 100vh
-	// z-index: 100
-	// overflow-y: scroll
-	// -webkit-overflow-scrolling: touch
-	+transition()
-	display: none
+	position: fixed
 
-	ul
-		margin: 0
-		padding: 0
+	nav
+		+position(absolute, 0 null null -100%)
+		width: 100%
+		+transition()
 
-		li
-			background: #eee
-			height: 400px
-			width: 100%
+		ul
+			margin: 0
+			padding: 0
 
-			&:nth-child(2n+1)
-				background: darken(#eee, 10%)
+			li
+				background: #eee
+				height: 400px
+				width: 100%
+
+				&:nth-child(2n+1)
+					background: darken(#eee, 10%)

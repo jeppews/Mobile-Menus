@@ -5,28 +5,69 @@
 	<title>Mobile Friendly Menus</title>
 	<!-- <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
 	<link rel="stylesheet" href="style.css">
+	<script src="jquery.js"></script>
 </head>
 <body>
+
+	<div class="js-mobile-menu style-1">
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Galleri</a></li>
+				<li><a href="#">Nyheder</a></li>
+				<li><a href="#">Udstillinger</a></li>
+				<li><a href="#">Yoga</a></li>
+				<li><a href="#">Kontakt</a></li>
+				<li><a href="#">Home</a></li>
+				<li>
+					<a href="#" class="sub">Udvid</a>
+					<ul>
+						<li><a href="#">Nyheder</a></li>
+						<li><a href="#">Udstillinger</a></li>
+						<li><a href="#">Yoga</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Kontakt</a></li>
+			</ul>
+		</nav>
+	</div>
+
 	<header>
 		<h1>Mobile friendly sidebars for you</h1>
 		<h4>with love by <a href="http://jeppesmith.dk">Jeppe Smith</a></h4>
 	</header>
 	<main>
-		<section>
-			<article>
-				<div class="demo">
-					<div class="demo-wrapper style-1">
-						
-						<iframe src="http://localhost/dev/mobile-menus/style-2/ " frameborder="0"></iframe>
-
-					</div>
-				</div>
-				<div class="desc">
-					<h1>Style 1</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa commodi consequatur libero alias dolores, laborum, nemo! Quisquam facere quos, fugit ipsam sed excepturi quis nulla harum, vel maiores voluptatibus dolore.</p>
-				</div>
-			</article>
-		</section>
+		<article>
+			<h1 class="mobile">Try out the different styles here!</h1>
+			<h1 class="desktop">Please resize your browser to try out the menus</h1>
+			<ul class="toggles">
+				<li><a href="#" class="toggle" data-style="style-1">Toggle style 1</a></li>
+				<li><a href="#" class="toggle" data-style="style-2">Toggle style 2</a></li>
+				<li><a href="#" class="toggle" data-style="style-3">Toggle style 3</a></li>
+			</ul>
+		</article>
 	</main>
+
+	<script>
+
+		$(document).ready(function() {
+
+			$('.js-mobile-menu .sub').on('click', function() {
+				$(this).parent().find('ul').toggleClass('open');
+			});
+
+			$('.toggle').on('click', function() {
+				style = $(this).attr('data-style');
+
+				$('body').removeClass();
+				$('body').addClass(style + '-open');
+
+				return false;
+			});
+
+		});
+
+	</script>
+
 </body>
 </html>

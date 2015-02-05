@@ -1,10 +1,11 @@
+$green: 	#0cba5d
+$light: 	#edfff5
+$dark: 		#333333
+$menu-bg: #fafafa
+
 @import 'bourbon/bourbon'
 @import 'neat/neat'
-@import 'js-mobile-menu-style-1'
-
-$green: #0cba5d
-$light: #edfff5
-$dark: 	#333333
+@import 'style-1'
 
 body
 	font-family: "Roboto", Helvetica, Arial, Sans-Serif
@@ -12,6 +13,14 @@ body
 	font-weight: 300
 	margin: 0
 	padding: 0
+
+.mobile
+	@media screen and (min-width: 768px)
+		display: none
+
+.desktop
+	@media screen and (max-width: 768px)
+		display: none
 
 header
 	background: $green
@@ -41,26 +50,38 @@ header
 		margin-left: -20px
 		+transform(rotate(45deg))
 
-section
-	+outer-container()
+article
+	width: 800px
+	margin: 0 auto
 
-.demo
-	background: url('img/iphone.png')
-	background-repeat: no-repeat
-	background-position: 50% 50% 
-	width: 383px
-	height: 800px
-	position: relative
+	@media screen and (max-width: 768px)
+		width: 100%
+		padding: 0 1em
 
-	.demo-wrapper
-		width: 320px
-		height: 544px
-		+position(absolute, 141px null null 35px)
-		background: $green
-		padding: 1em
-		overflow: hidden
+	h1
+		text-align: center
+		color: $dark
+		margin: 4em 0 2em
 
-		.style-name
-			font-size: 2em
-			color: $light
-			font-weight: bold
+ul
+	margin: 0
+	padding: 0
+	list-style: none
+
+	li
+		margin: 0.5em 0
+		text-align: center
+
+.toggle
+	display: inline-block
+	font-size: 1.3em
+	padding: 0 3em
+	line-height: 3em
+	background: $green
+	color: $light
+	text-decoration: none
+	text-transform: uppercase
+	font-weight: 500
+
+	@media screen and (min-width: 768px)
+		background: #ae4343

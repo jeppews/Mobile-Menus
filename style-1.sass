@@ -1,0 +1,61 @@
+body.style-1-open
+	max-height: 100vh
+	overflow: hidden
+	
+	.js-mobile-menu.style-1 
+		bottom: 0
+		overflow-y: scroll
+		-webkit-overflow-scrolling: touch
+
+		nav
+			display: block
+
+.js-mobile-menu.style-1
+	+position(fixed, 0 0 null 0)
+	z-index: 100
+	background: rgba(0,0,0,0)
+
+	.controls
+		height: 4em
+		line-height: 4em
+		background: #fff
+		box-shadow: 0 1px 1px #999
+		padding: 0 1em
+
+	nav
+		padding: 60px 40px
+		+transition()
+		display: none
+	
+		ul
+			margin: 0
+			padding: 0
+			list-style: none
+			box-shadow: 0 0 20px 100px #000
+			background: $menu-bg
+
+			li
+				border-bottom: 1px solid #f8f8f8
+
+				a
+					display: block
+					padding: 1em
+					color: #999
+					text-decoration: none
+
+			ul
+				height: 0
+				overflow: hidden
+				+transition()
+				box-shadow: none
+				border-top: 1px solid #f8f8f8
+				background: darken($menu-bg, 5%)
+
+				li
+					border-bottom: 1px solid darken(#f8f8f8, 3%)
+
+					&:last-child
+						border-bottom: none
+
+				&.open
+					height: auto
